@@ -38,7 +38,7 @@ struct RocketSelector: View {
             )
         ) {
             if let rocket = selectedRocket {
-                RocketDetail(rocket: rocket)
+                RocketDetail(rocket: rocket, isPresenting: $showDetail)
             }
         }
         .onChange(of: viewModel.rockets) {

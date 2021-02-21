@@ -10,44 +10,64 @@ import SwiftUI
 struct RocketDetail: View {
     
     @Environment(\.horizontalSizeClass) var horizontalSizeClass
+    
     let rocket: SpaceX.Rocket.ViewModel
-
+    @Binding var isPresenting: Bool
+    
     var body: some View {
-        ScrollView {
+        NavigationView {
             VStack {
-                GeometryReader { geometry in
-                    TabView {
-                        ForEach(rocket.imageURLs) { url in
-                            RemoteImage(url: url)
-                                .aspectRatio(contentMode: .fit)
-                                .frame(height: 250)
-                        }
-                    }
-                    .background(Rectangle()
-                                    .fill(Color.black))
-                    .tabViewStyle(PageTabViewStyle())
-                    .frame(width: geometry.size.width, height: 250)
-
-                }
-                .frame(height: 250)
-                
-                if horizontalSizeClass == .compact {
-                    VStack(alignment: .leading, spacing: 10) {
-                        mainInfo
-                        infoCard
-                    }.padding()
-                } else {
-                    HStack(alignment: .top, spacing: 20) {
-                        VStack(alignment: .trailing, spacing: 5) {
+                ScrollView {
+                    carousel
+                    if horizontalSizeClass == .compact {
+                        VStack(alignment: .leading, spacing: 10) {
+                            mainInfo
                             infoCard
-                        }
-                        mainInfo
-                    }.padding()
+                        }.padding()
+                    } else {
+                        HStack(alignment: .top, spacing: 20) {
+                            VStack(alignment: .trailing, spacing: 5) {
+                                infoCard
+                            }
+                            mainInfo
+                        }.padding()
+                    }
+                }
+                footer
+            }
+            .navigationBarTitle(rocket.name, displayMode: .inline)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: {
+                        isPresenting = false
+                    }) {
+                        Image(systemName: "multiply")
+                    }
                 }
             }
         }
-        footer
     }
+    
+    var carousel: some View {
+        GeometryReader { geometry in
+            ZStack(alignment: Alignment(horizontal: .trailing, vertical: .top)) {
+                TabView {
+                    ForEach(rocket.imageURLs) { url in
+                        RemoteImage(url: url)
+                            .aspectRatio(contentMode: .fit)
+                            .frame(height: 250)
+                    }
+                }
+                .background(Rectangle()
+                                .fill(Color.black))
+                .tabViewStyle(PageTabViewStyle())
+                .frame(width: geometry.size.width, height: 250)
+                
+            }
+        }
+        .frame(height: 250)
+    }
+    
     
     var footer: some View {
         Link(destination: rocket.wikipediaURL) {
@@ -87,7 +107,7 @@ struct RocketDetail: View {
 
 struct RocketDetail_Previews: PreviewProvider {
     static var previews: some View {
-        RocketDetail(rocket: .init(rocket: .preview))
+        RocketDetail(rocket: .init(rocket: .preview), isPresenting: .constant(true))
     }
 }
 
