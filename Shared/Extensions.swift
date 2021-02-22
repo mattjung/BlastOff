@@ -66,3 +66,35 @@ extension Publisher {
         }
     }
 }
+
+extension UIView {
+    
+    func nibView(named: String) -> UIView {
+        guard let view = Bundle.main.loadNibNamed(named, owner: self, options: nil)?.first as? UIView else {
+            fatalError("Missing xib named: \(named)")
+        }
+        
+        return view
+    }
+    
+    func addSubview(_ subview: UIView, pinning: UIRectEdge) {
+        subview.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(subview)
+
+        if pinning.contains(.top) {
+            subview.topAnchor.constraint(equalTo: topAnchor).isActive = true
+        }
+        
+        if pinning.contains(.bottom) {
+            subview.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+        }
+        
+        if pinning.contains(.left) {
+            subview.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
+        }
+        
+        if pinning.contains(.right) {
+            subview.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
+        }
+    }
+}

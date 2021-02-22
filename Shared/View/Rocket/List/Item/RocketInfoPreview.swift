@@ -15,8 +15,8 @@ struct RocketInfoPreview: View {
         VStack(alignment: .leading, spacing: 5) {
             Text(rocket.name)
                 .fontWeight(.medium)
-            Text("First flight: \(rocket.firstFlightDate)")
-            SuccessRateView(successRate: rocket.successRate)
+            Text(rocket.firstFlightDateLabel)
+            SuccessRate(successRate: rocket.successRate.viewModel)
         }
     }
 }

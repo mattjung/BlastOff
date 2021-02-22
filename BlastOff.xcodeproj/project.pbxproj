@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02237FF425E45ACE0040F684 /* Rocket+Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02904DFD25E1C94000A1BD39 /* Rocket+Currency.swift */; };
+		02237FF525E45ACE0040F684 /* Rocket+SuccessRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02904DED25E1C78D00A1BD39 /* Rocket+SuccessRate.swift */; };
 		0271AA0E25E2CA33002B79D6 /* RocketHeroImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0271AA0D25E2CA33002B79D6 /* RocketHeroImage.swift */; };
 		0271AA1325E2CF5E002B79D6 /* RocketGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0271AA1225E2CF5E002B79D6 /* RocketGrid.swift */; };
 		0271AA1825E2CF6B002B79D6 /* RocketSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0271AA1725E2CF6B002B79D6 /* RocketSelector.swift */; };
@@ -20,12 +22,12 @@
 		0280D95525E1308600833EB7 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0280D95325E1308600833EB7 /* ImageLoader.swift */; };
 		0280D96725E1361200833EB7 /* RocketDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0280D96625E1361200833EB7 /* RocketDetailView.swift */; };
 		0280D96825E1361200833EB7 /* RocketDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0280D96625E1361200833EB7 /* RocketDetailView.swift */; };
-		02904D8F25E1BC1900A1BD39 /* SuccessRateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02904D8E25E1BC1900A1BD39 /* SuccessRateView.swift */; };
-		02904DE025E1C60B00A1BD39 /* Rocket+ViewModel+SuccessRate+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02904D9A25E1BF2B00A1BD39 /* Rocket+ViewModel+SuccessRate+Tests.swift */; };
-		02904DEE25E1C78D00A1BD39 /* Rocket+ViewModel+SuccessRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02904DED25E1C78D00A1BD39 /* Rocket+ViewModel+SuccessRate.swift */; };
+		02904D8F25E1BC1900A1BD39 /* SuccessRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02904D8E25E1BC1900A1BD39 /* SuccessRate.swift */; };
+		02904DE025E1C60B00A1BD39 /* Rocket+SuccessRate+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02904D9A25E1BF2B00A1BD39 /* Rocket+SuccessRate+Tests.swift */; };
+		02904DEE25E1C78D00A1BD39 /* Rocket+SuccessRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02904DED25E1C78D00A1BD39 /* Rocket+SuccessRate.swift */; };
 		02904DF925E1C8AA00A1BD39 /* Rocket+List+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02904DF825E1C8AA00A1BD39 /* Rocket+List+ViewModel.swift */; };
-		02904DFE25E1C94000A1BD39 /* Rocket+ViewModel+Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02904DFD25E1C94000A1BD39 /* Rocket+ViewModel+Currency.swift */; };
-		02904E0325E1CB3100A1BD39 /* Rocket+ViewModel+Currency+Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02904E0225E1CB3100A1BD39 /* Rocket+ViewModel+Currency+Test.swift */; };
+		02904DFE25E1C94000A1BD39 /* Rocket+Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02904DFD25E1C94000A1BD39 /* Rocket+Currency.swift */; };
+		02904E0325E1CB3100A1BD39 /* Rocket+Currency+Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02904E0225E1CB3100A1BD39 /* Rocket+Currency+Test.swift */; };
 		0294608225DF2D7F004CA5BB /* BlastOffApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0294605625DF2D7C004CA5BB /* BlastOffApp.swift */; };
 		0294608325DF2D7F004CA5BB /* BlastOffApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0294605625DF2D7C004CA5BB /* BlastOffApp.swift */; };
 		0294608825DF2D7F004CA5BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0294605925DF2D7F004CA5BB /* Assets.xcassets */; };
@@ -39,7 +41,14 @@
 		029460CA25DF2E0A004CA5BB /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 029460C925DF2E0A004CA5BB /* Alamofire */; };
 		029460D025DF2E30004CA5BB /* SpaceX+api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029460CF25DF2E30004CA5BB /* SpaceX+api.swift */; };
 		029460D125DF2E30004CA5BB /* SpaceX+api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029460CF25DF2E30004CA5BB /* SpaceX+api.swift */; };
+		02ED6A8A25E4619400D76234 /* Rocket+SuccessRate+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ED6A8325E460FD00D76234 /* Rocket+SuccessRate+ViewModel.swift */; };
+		02ED6A8E25E4619B00D76234 /* Rocket+SuccessRate+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ED6A8325E460FD00D76234 /* Rocket+SuccessRate+ViewModel.swift */; };
 		02FFFD3125E2ED8800187EEC /* RocketInfoPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FFFD3025E2ED8800187EEC /* RocketInfoPreview.swift */; };
+		02FFFD5C25E4326100187EEC /* RocketCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FFFD5825E4324F00187EEC /* RocketCollection.swift */; };
+		02FFFD6625E4346700187EEC /* GridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FFFD6525E4346700187EEC /* GridCell.swift */; };
+		02FFFD6B25E4347B00187EEC /* GridCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02FFFD6A25E4347B00187EEC /* GridCell.xib */; };
+		02FFFD8125E4502000187EEC /* SuccessRateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FFFD8025E4502000187EEC /* SuccessRateView.swift */; };
+		02FFFD8925E452C900187EEC /* Rocket+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FFFD8825E452C900187EEC /* Rocket+ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,14 +70,14 @@
 		0280D94525E04FE400833EB7 /* RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
 		0280D95325E1308600833EB7 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		0280D96625E1361200833EB7 /* RocketDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketDetailView.swift; sourceTree = "<group>"; };
-		02904D8E25E1BC1900A1BD39 /* SuccessRateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessRateView.swift; sourceTree = "<group>"; };
-		02904D9A25E1BF2B00A1BD39 /* Rocket+ViewModel+SuccessRate+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rocket+ViewModel+SuccessRate+Tests.swift"; sourceTree = "<group>"; };
+		02904D8E25E1BC1900A1BD39 /* SuccessRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessRate.swift; sourceTree = "<group>"; };
+		02904D9A25E1BF2B00A1BD39 /* Rocket+SuccessRate+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rocket+SuccessRate+Tests.swift"; sourceTree = "<group>"; };
 		02904DCF25E1C5F600A1BD39 /* BlastOffTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlastOffTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		02904DD325E1C5F600A1BD39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		02904DED25E1C78D00A1BD39 /* Rocket+ViewModel+SuccessRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rocket+ViewModel+SuccessRate.swift"; sourceTree = "<group>"; };
+		02904DED25E1C78D00A1BD39 /* Rocket+SuccessRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rocket+SuccessRate.swift"; sourceTree = "<group>"; };
 		02904DF825E1C8AA00A1BD39 /* Rocket+List+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rocket+List+ViewModel.swift"; sourceTree = "<group>"; };
-		02904DFD25E1C94000A1BD39 /* Rocket+ViewModel+Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rocket+ViewModel+Currency.swift"; sourceTree = "<group>"; };
-		02904E0225E1CB3100A1BD39 /* Rocket+ViewModel+Currency+Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rocket+ViewModel+Currency+Test.swift"; sourceTree = "<group>"; };
+		02904DFD25E1C94000A1BD39 /* Rocket+Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rocket+Currency.swift"; sourceTree = "<group>"; };
+		02904E0225E1CB3100A1BD39 /* Rocket+Currency+Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rocket+Currency+Test.swift"; sourceTree = "<group>"; };
 		0294605625DF2D7C004CA5BB /* BlastOffApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlastOffApp.swift; sourceTree = "<group>"; };
 		0294605925DF2D7F004CA5BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0294605E25DF2D7F004CA5BB /* BlastOff.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlastOff.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -80,7 +89,13 @@
 		029460A325DF2D94004CA5BB /* RocketList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RocketList.swift; sourceTree = "<group>"; };
 		029460AA25DF2D9B004CA5BB /* Rocket+ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Rocket+ViewModel.swift"; sourceTree = "<group>"; };
 		029460CF25DF2E30004CA5BB /* SpaceX+api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "SpaceX+api.swift"; path = "Shared/SpaceX+api.swift"; sourceTree = SOURCE_ROOT; };
+		02ED6A8325E460FD00D76234 /* Rocket+SuccessRate+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rocket+SuccessRate+ViewModel.swift"; sourceTree = "<group>"; };
 		02FFFD3025E2ED8800187EEC /* RocketInfoPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketInfoPreview.swift; sourceTree = "<group>"; };
+		02FFFD5825E4324F00187EEC /* RocketCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketCollection.swift; sourceTree = "<group>"; };
+		02FFFD6525E4346700187EEC /* GridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridCell.swift; sourceTree = "<group>"; };
+		02FFFD6A25E4347B00187EEC /* GridCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GridCell.xib; sourceTree = "<group>"; };
+		02FFFD8025E4502000187EEC /* SuccessRateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessRateView.swift; sourceTree = "<group>"; };
+		02FFFD8825E452C900187EEC /* Rocket+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rocket+ViewModel.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,7 +129,7 @@
 			children = (
 				0280D95B25E135BE00833EB7 /* Detail */,
 				0280D95C25E135CF00833EB7 /* List */,
-				02904D8E25E1BC1900A1BD39 /* SuccessRateView.swift */,
+				02904D8E25E1BC1900A1BD39 /* SuccessRate.swift */,
 				0271AA0D25E2CA33002B79D6 /* RocketHeroImage.swift */,
 			);
 			path = Rocket;
@@ -151,8 +166,9 @@
 		02904DD025E1C5F600A1BD39 /* BlastOffTests */ = {
 			isa = PBXGroup;
 			children = (
-				02904D9A25E1BF2B00A1BD39 /* Rocket+ViewModel+SuccessRate+Tests.swift */,
-				02904E0225E1CB3100A1BD39 /* Rocket+ViewModel+Currency+Test.swift */,
+				02FFFD8825E452C900187EEC /* Rocket+ViewModel.swift */,
+				02904D9A25E1BF2B00A1BD39 /* Rocket+SuccessRate+Tests.swift */,
+				02904E0225E1CB3100A1BD39 /* Rocket+Currency+Test.swift */,
 				02904DD325E1C5F600A1BD39 /* Info.plist */,
 			);
 			path = BlastOffTests;
@@ -198,6 +214,10 @@
 			isa = PBXGroup;
 			children = (
 				0294606125DF2D7F004CA5BB /* Info.plist */,
+				02FFFD5825E4324F00187EEC /* RocketCollection.swift */,
+				02FFFD6A25E4347B00187EEC /* GridCell.xib */,
+				02FFFD6525E4346700187EEC /* GridCell.swift */,
+				02FFFD8025E4502000187EEC /* SuccessRateView.swift */,
 			);
 			path = iOS;
 			sourceTree = "<group>";
@@ -224,9 +244,8 @@
 			isa = PBXGroup;
 			children = (
 				029460AA25DF2D9B004CA5BB /* Rocket+ViewModel.swift */,
+				02ED6A8325E460FD00D76234 /* Rocket+SuccessRate+ViewModel.swift */,
 				02904DF825E1C8AA00A1BD39 /* Rocket+List+ViewModel.swift */,
-				02904DED25E1C78D00A1BD39 /* Rocket+ViewModel+SuccessRate.swift */,
-				02904DFD25E1C94000A1BD39 /* Rocket+ViewModel+Currency.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -235,6 +254,8 @@
 			isa = PBXGroup;
 			children = (
 				0294609C25DF2D8C004CA5BB /* Rocket.swift */,
+				02904DED25E1C78D00A1BD39 /* Rocket+SuccessRate.swift */,
+				02904DFD25E1C94000A1BD39 /* Rocket+Currency.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -362,6 +383,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0294608825DF2D7F004CA5BB /* Assets.xcassets in Resources */,
+				02FFFD6B25E4347B00187EEC /* GridCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,8 +402,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02904E0325E1CB3100A1BD39 /* Rocket+ViewModel+Currency+Test.swift in Sources */,
-				02904DE025E1C60B00A1BD39 /* Rocket+ViewModel+SuccessRate+Tests.swift in Sources */,
+				02904E0325E1CB3100A1BD39 /* Rocket+Currency+Test.swift in Sources */,
+				02FFFD8925E452C900187EEC /* Rocket+ViewModel.swift in Sources */,
+				02904DE025E1C60B00A1BD39 /* Rocket+SuccessRate+Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,23 +413,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				0294608225DF2D7F004CA5BB /* BlastOffApp.swift in Sources */,
+				02904D8F25E1BC1900A1BD39 /* SuccessRate.swift in Sources */,
 				0280D93825E047E700833EB7 /* Extensions.swift in Sources */,
 				0280D95425E1308600833EB7 /* ImageLoader.swift in Sources */,
-				02904DFE25E1C94000A1BD39 /* Rocket+ViewModel+Currency.swift in Sources */,
 				0271AA1325E2CF5E002B79D6 /* RocketGrid.swift in Sources */,
 				0271AA0E25E2CA33002B79D6 /* RocketHeroImage.swift in Sources */,
+				02FFFD5C25E4326100187EEC /* RocketCollection.swift in Sources */,
 				0280D93F25E04DC800833EB7 /* RocketRow.swift in Sources */,
 				0271AA1825E2CF6B002B79D6 /* RocketSelector.swift in Sources */,
 				0280D94625E04FE400833EB7 /* RemoteImage.swift in Sources */,
 				029460D025DF2E30004CA5BB /* SpaceX+api.swift in Sources */,
 				02FFFD3125E2ED8800187EEC /* RocketInfoPreview.swift in Sources */,
+				02FFFD8125E4502000187EEC /* SuccessRateView.swift in Sources */,
 				0294609D25DF2D8D004CA5BB /* Rocket.swift in Sources */,
-				02904DEE25E1C78D00A1BD39 /* Rocket+ViewModel+SuccessRate.swift in Sources */,
+				02904DEE25E1C78D00A1BD39 /* Rocket+SuccessRate.swift in Sources */,
 				0280D96725E1361200833EB7 /* RocketDetailView.swift in Sources */,
 				029460AB25DF2D9B004CA5BB /* Rocket+ViewModel.swift in Sources */,
+				02FFFD6625E4346700187EEC /* GridCell.swift in Sources */,
+				02ED6A8A25E4619400D76234 /* Rocket+SuccessRate+ViewModel.swift in Sources */,
 				02904DF925E1C8AA00A1BD39 /* Rocket+List+ViewModel.swift in Sources */,
 				029460A425DF2D94004CA5BB /* RocketList.swift in Sources */,
-				02904D8F25E1BC1900A1BD39 /* SuccessRateView.swift in Sources */,
+				02904DFE25E1C94000A1BD39 /* Rocket+Currency.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,7 +442,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0294608325DF2D7F004CA5BB /* BlastOffApp.swift in Sources */,
+				02ED6A8E25E4619B00D76234 /* Rocket+SuccessRate+ViewModel.swift in Sources */,
+				02237FF425E45ACE0040F684 /* Rocket+Currency.swift in Sources */,
 				0280D93925E047E700833EB7 /* Extensions.swift in Sources */,
+				02237FF525E45ACE0040F684 /* Rocket+SuccessRate.swift in Sources */,
 				0280D95525E1308600833EB7 /* ImageLoader.swift in Sources */,
 				0280D94025E04DC800833EB7 /* RocketRow.swift in Sources */,
 				0280D94725E04FE400833EB7 /* RemoteImage.swift in Sources */,

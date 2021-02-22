@@ -1,5 +1,5 @@
 //
-//  SuccessRateView.swift
+//  SuccessRate.swift
 //  BlastOff (iOS)
 //
 //  Created by Matt Jung on 20/02/2021.
@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-struct SuccessRateView: View {
+struct SuccessRate: View {
     
-    let successRate: SpaceX.Rocket.ViewModel.SuccessRate
+    let successRate: SpaceX.Rocket.SuccessRate.ViewModel
     
     var body: some View {
-        Text("Success Rate: \(successRate.formatted)")
+        Text(successRate.label)
             .padding(.horizontal, 10)
             .padding(.vertical, 5)
             .background(
@@ -24,7 +24,7 @@ struct SuccessRateView: View {
 
 struct SuccessRateView_Previews: PreviewProvider {
     static var previews: some View {
-        SuccessRateView(successRate: SpaceX.Rocket.ViewModel(rocket: .preview).successRate)
+        SuccessRate(successRate: SpaceX.Rocket.ViewModel(rocket: .preview).successRate.viewModel)
             .previewLayout(PreviewLayout.sizeThatFits)
 
     }

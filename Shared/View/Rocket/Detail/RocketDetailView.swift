@@ -96,11 +96,11 @@ struct RocketDetail: View {
     }
     var infoCard: some View {
         Group {
-            SuccessRateView(successRate: rocket.successRate)
-            Text("Country: \(rocket.country)")
-            Text("First flight: \(rocket.firstFlightDate)")
-            Text("Cost per launch: \(rocket.costPerLaunch?.formatted ?? "<Unknown>")")
-            Text(rocket.active ? "Active" : "Not active")
+            SuccessRate(successRate: rocket.successRate.viewModel)
+            Text(rocket.countrylabel)
+            Text(rocket.firstFlightDateLabel)
+            Text(rocket.costPerLaunchLabel)
+            Text(rocket.activeLabel)
         }
     }
 }

@@ -15,20 +15,30 @@ struct RocketSelector: View {
     @State var showDetail = false
     @State var selectedRocket: SpaceX.Rocket.ViewModel?
     
+    var useUIKit: Bool
+    
     var body: some View {
         Group {
-            if horizontalSizeClass == .compact {
-                RocketList(
+            if useUIKit {
+                RocketCollection(
                     showDetail: $showDetail,
                     rockets: $viewModel.rockets,
                     selectedRocket: $selectedRocket
                 )
             } else {
-                RocketGrid(
-                    showDetail: $showDetail,
-                    rockets: $viewModel.rockets,
-                    selectedRocket: $selectedRocket
-                )
+                if horizontalSizeClass == .compact {
+                    RocketList(
+                        showDetail: $showDetail,
+                        rockets: $viewModel.rockets,
+                        selectedRocket: $selectedRocket
+                    )
+                } else {
+                    RocketGrid(
+                        showDetail: $showDetail,
+                        rockets: $viewModel.rockets,
+                        selectedRocket: $selectedRocket
+                    )
+                }
             }
         }
         .sheet(
@@ -51,6 +61,6 @@ struct RocketSelector: View {
 
 struct RocketSelector_Previews: PreviewProvider {
     static var previews: some View {
-        RocketSelector()
+        RocketSelector(useUIKit: true)
     }
 }

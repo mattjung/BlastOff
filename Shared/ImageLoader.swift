@@ -6,7 +6,7 @@
 //
 
 import Alamofire
-import SwiftUI
+import UIKit
 import Combine
 
 class ImageLoader: ObservableObject {
@@ -18,7 +18,7 @@ class ImageLoader: ObservableObject {
     enum RequestState {
         case readyToLoad
         case loading
-        case success(Image)
+        case success(UIImage)
         case failure
     }
     
@@ -30,7 +30,7 @@ class ImageLoader: ObservableObject {
             .cacheResponse(using: ResponseCacher(behavior: .cache))
             .publishData()
             .tryMap { try $0.data.ifNilthrow("Data Missing")  }
-            .tryMap { try (UIImage(data: $0)?.image).ifNilthrow("Image Missing") }
+            .tryMap { try UIImage(data: $0).ifNilthrow("Image Missing") }
             .map { RequestState.success($0) }
             .catch(logger: defaultLog, default: RequestState.failure)
             .subscribe(on: Self.queue)

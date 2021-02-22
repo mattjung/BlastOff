@@ -29,7 +29,7 @@ struct RemoteImage: View {
         case .readyToLoad, .loading:
             ProgressView()
         case .success(let image):
-            image
+            image.image
                 .resizable()
                 .aspectRatio(contentMode: .fill)
         case .failure:

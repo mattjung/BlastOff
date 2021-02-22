@@ -7,9 +7,9 @@
 
 import Foundation
 
-extension SpaceX.Rocket.ViewModel {
+extension SpaceX.Rocket {
 
-    struct Currency: Equatable {
+    struct Currency: Codable, Equatable, Hashable {
         let value: Double
         let formatted: String
         
@@ -18,10 +18,21 @@ extension SpaceX.Rocket.ViewModel {
             self.formatted = try Self.formatted(value: value, locale: locale)
                 .ifNilthrow("Not valid: \(value) as currency")
         }
+        
+        init(from decoder: Decoder) throws {
+            let container = try decoder.singleValueContainer()
+            let value = try container.decode(Double.self)
+            try self.init(value: value, locale: Locale(identifier: "en_US"))
+        }
+        
+        func encode(to encoder: Encoder) throws {
+            var container = encoder.singleValueContainer()
+            try container.encode(value)
+        }
     }
 }
 
-extension SpaceX.Rocket.ViewModel.Currency {
+extension SpaceX.Rocket.Currency {
 
     static func formatted(value: Double, locale: Locale) -> String? {
         let formatter = with(NumberFormatter(.currency)) {

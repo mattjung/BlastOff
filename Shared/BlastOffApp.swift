@@ -13,7 +13,7 @@ struct BlastOffApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationView {
-                RocketSelector()
+                RocketSelector(useUIKit: true)
                     .navigationTitle("Rockets")
             }
             .navigationViewStyle(StackNavigationViewStyle())
