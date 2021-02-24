@@ -27,9 +27,14 @@ enum SpaceX {
     }
 }
 
-extension SpaceX.api.v4.rockets {
+protocol RocketsAPI {
+    static func get() -> AnyPublisher<[SpaceX.Rocket], Error>
+    
+}
 
-    static func publisher() -> AnyPublisher<[SpaceX.Rocket], Error> {
+extension SpaceX.api.v4.rockets: RocketsAPI {
+
+    static func get() -> AnyPublisher<[SpaceX.Rocket], Error> {
         
         return AF.request(SpaceX.api.v4.rockets.url)
             .publishData()
@@ -37,6 +42,16 @@ extension SpaceX.api.v4.rockets {
             .decode(type: [SpaceX.Rocket?].self, decoder: SpaceX.api.jsonDecoder)
             .map { $0.compactMap { $0 } }
             .eraseToAnyPublisher()
+    }
+}
+
+extension SpaceX.api.v4.rockets {
+    class Mock: RocketsAPI {
+        static func get() -> AnyPublisher<[SpaceX.Rocket], Error> {
+            Just([SpaceX.Rocket.preview])
+                .setFailureType(to: Error.self)
+                .eraseToAnyPublisher()
+        }
     }
 }
 

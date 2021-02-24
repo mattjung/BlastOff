@@ -16,14 +16,29 @@ extension SpaceX.Rocket {
             
             @Published var rockets: [SpaceX.Rocket.ViewModel] = []
             
-            var subscription: AnyCancellable?
+            var rocketAPI: RocketsAPI.Type
             
-            init() {
-                subscription = SpaceX.api.v4.rockets
-                    .publisher()
+            @Published var showDetail = false
+            @Published var selectedRocket: SpaceX.Rocket.ViewModel?
+            @Published var presentDetail = false
+            private var store = Set<AnyCancellable>()
+            
+            init(rocketAPI: RocketsAPI.Type = SpaceX.api.v4.rockets.self) {
+                
+                self.rocketAPI = rocketAPI
+                
+                rocketAPI
+                    .get()
                     .map { $0.map(\.viewModel) }
                     .catch(logger: defaultLog, default: rockets)
                     .assign(to: \.rockets, on: self)
+                    .store(in: &store)
+                
+                $showDetail
+                    .combineLatest($selectedRocket)
+                    .map { $0 && !($1 == nil) }
+                    .assign(to: \.presentDetail, on: self)
+                    .store(in: &store)
             }
         }
     }
