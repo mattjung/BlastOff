@@ -10,7 +10,7 @@ import Combine
 
 class GridCell: UICollectionViewCell {
     
-    let loader = ImageLoader()
+    var loader = ImageLoader()
     var imageSubscription: AnyCancellable?
     var imageState: ImageLoader.RequestState {
         set {

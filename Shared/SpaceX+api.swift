@@ -29,7 +29,6 @@ enum SpaceX {
 
 protocol RocketsAPI {
     static func get() -> AnyPublisher<[SpaceX.Rocket], Error>
-    
 }
 
 extension SpaceX.api.v4.rockets: RocketsAPI {
@@ -40,7 +39,7 @@ extension SpaceX.api.v4.rockets: RocketsAPI {
             .publishData()
             .tryMap { try $0.data.ifNilthrow("Data Missing")  }
             .decode(type: [SpaceX.Rocket?].self, decoder: SpaceX.api.jsonDecoder)
-            .map { $0.compactMap { $0 } }
+            .map { $0.compactMap{$0} }
             .eraseToAnyPublisher()
     }
 }

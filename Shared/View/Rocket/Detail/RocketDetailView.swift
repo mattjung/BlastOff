@@ -5,6 +5,7 @@
 //  Created by Matt Jung on 20/02/2021.
 //
 
+import SwiftUIPager
 import SwiftUI
 
 struct RocketDetail: View {
@@ -13,6 +14,7 @@ struct RocketDetail: View {
     
     let rocket: SpaceX.Rocket.ViewModel
     @Binding var isPresenting: Bool
+    @StateObject var page: Page = .first()
     
     var body: some View {
         NavigationView {
@@ -51,19 +53,17 @@ struct RocketDetail: View {
     var carousel: some View {
         GeometryReader { geometry in
             ZStack(alignment: Alignment(horizontal: .trailing, vertical: .top)) {
-                TabView {
-                    ForEach(rocket.imageURLs) { url in
-                        RemoteImage(url: url)
-                            .aspectRatio(contentMode: .fit)
-                            .frame(height: 250)
-                    }
+                Pager(page: page,
+                      data: rocket.imageURLs) { url in
+                    RemoteImage(url: url)
+                        .frame(height: 250)
                 }
-                .background(Rectangle()
-                                .fill(Color.black))
-                .tabViewStyle(PageTabViewStyle())
-                .frame(width: geometry.size.width, height: 250)
-                
             }
+            .background(Rectangle()
+                            .fill(Color.black))
+            .tabViewStyle(PageTabViewStyle())
+            .frame(width: geometry.size.width, height: 250)
+            
         }
         .frame(height: 250)
     }

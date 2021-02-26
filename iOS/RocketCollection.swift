@@ -51,7 +51,9 @@ struct RocketCollection: UIViewRepresentable {
 class RocketsCollectionView: UICollectionView {
 
     var rockets: [SpaceX.Rocket.ViewModel] {
-        didSet { refresh(animated: true) }
+        didSet {
+            guard rockets != oldValue else { return }
+            refresh(animated: true) }
     }
     
     enum Section {

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		02237FF425E45ACE0040F684 /* Rocket+Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02904DFD25E1C94000A1BD39 /* Rocket+Currency.swift */; };
 		02237FF525E45ACE0040F684 /* Rocket+SuccessRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02904DED25E1C78D00A1BD39 /* Rocket+SuccessRate.swift */; };
+		0262BCDA25E999DA0092FB03 /* SwiftUIPager in Frameworks */ = {isa = PBXBuildFile; productRef = 0262BCD925E999DA0092FB03 /* SwiftUIPager */; };
 		0271AA0E25E2CA33002B79D6 /* RocketHeroImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0271AA0D25E2CA33002B79D6 /* RocketHeroImage.swift */; };
 		0271AA1325E2CF5E002B79D6 /* RocketGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0271AA1225E2CF5E002B79D6 /* RocketGrid.swift */; };
 		0271AA1825E2CF6B002B79D6 /* RocketSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0271AA1725E2CF6B002B79D6 /* RocketSelector.swift */; };
@@ -110,6 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0262BCDA25E999DA0092FB03 /* SwiftUIPager in Frameworks */,
 				029460CA25DF2E0A004CA5BB /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,6 +306,7 @@
 			name = "BlastOff (iOS)";
 			packageProductDependencies = (
 				029460C925DF2E0A004CA5BB /* Alamofire */,
+				0262BCD925E999DA0092FB03 /* SwiftUIPager */,
 			);
 			productName = "BlastOff (iOS)";
 			productReference = 0294605E25DF2D7F004CA5BB /* BlastOff.app */;
@@ -358,6 +361,7 @@
 			mainGroup = 0294604E25DF2D7C004CA5BB;
 			packageReferences = (
 				029460C825DF2E0A004CA5BB /* XCRemoteSwiftPackageReference "Alamofire" */,
+				0262BCD825E999DA0092FB03 /* XCRemoteSwiftPackageReference "SwiftUIPager" */,
 			);
 			productRefGroup = 0294605F25DF2D7F004CA5BB /* Products */;
 			projectDirPath = "";
@@ -759,6 +763,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		0262BCD825E999DA0092FB03 /* XCRemoteSwiftPackageReference "SwiftUIPager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/fermoya/SwiftUIPager.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.2;
+			};
+		};
 		029460C825DF2E0A004CA5BB /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire";
@@ -770,6 +782,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		0262BCD925E999DA0092FB03 /* SwiftUIPager */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0262BCD825E999DA0092FB03 /* XCRemoteSwiftPackageReference "SwiftUIPager" */;
+			productName = SwiftUIPager;
+		};
 		029460C925DF2E0A004CA5BB /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 029460C825DF2E0A004CA5BB /* XCRemoteSwiftPackageReference "Alamofire" */;

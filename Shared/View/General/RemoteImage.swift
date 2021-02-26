@@ -11,16 +11,17 @@ import Alamofire
 
 struct RemoteImage: View {
     
-    @ObservedObject private var imageLoader =
-        ImageLoader()
+    @StateObject private var imageLoader: ImageLoader
+    
+    let url: URL
     
     init(url: URL) {
-        imageLoader.load(url: url)
+        self.url = url
+        _imageLoader = StateObject(wrappedValue: ImageLoader())
     }
     
-    @ViewBuilder
     var body: some View {
-        image
+        image.onAppear { imageLoader.load(url: url) }
     }
     
     @ViewBuilder
